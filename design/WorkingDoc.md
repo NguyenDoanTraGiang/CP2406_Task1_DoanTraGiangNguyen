@@ -37,4 +37,11 @@ Road class will represent a single lane road object. It has the following attrib
 
 For this version of the program the speedLimit will be set to 1. Meaning the car will only be able to move 1 position each turn, make it easier to deal with traffic lights and end of the road. The length of the road will be decided by user's input. Roads will interact with other roads by being connected to them, creating a simple straight intersection with single lane. Cars will move from the starting position to the end of the road. Traffic light can be places only at the end of the road. 
 
+#### Traffic Light
+Traffic light class will represent a simple red or green traffic light. The class has the following attributes;
+- *id* - a unique identifier that will differentiate each traffic light.
+- *state* - the colour the traffic light is displaying.
+- *position* - where the traffic light is placed on the road.
+- *roadAttachedTo* - the road that the light is placed on.
+
 
