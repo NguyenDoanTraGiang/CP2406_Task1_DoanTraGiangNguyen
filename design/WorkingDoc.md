@@ -1,0 +1,5 @@
+# Java Based Traffic Simulator
+## Program Working Document
+
+### Specification
+the client needs a program that can simulate traffic in city areas; needing to simulate different vechicle types with traffic light, roads and intersections. The user can enter input into the program to customized the city, and the program will display the objects and their status to the user. This version of the program will not display the UI, but the user can enter input for the customization of their city. The objects that are available for the users are cars, traffic lights and single lane roads. the user can choose how many cars, traffic lights and roads will the city has. This version of the simulator will simulate cars moving along single lane roads connected to each other, and move to the end of that road. 
