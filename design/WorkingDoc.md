@@ -24,6 +24,16 @@ Bus class will inherit its attributes and behaviour from Car, represent the larg
 #### Motorbike
 Motorbike class will inherit its attributes and behaviour from Car class, represent a small sized vehicle. However, the length of the Motorbike class will be half the length of the Car's length.
 
+#### Road
+Road class will represent a single lane road object. It has the following attributes;
+- *id* - a unique identifier that will differenciate each road.
+- *speedLimit* - the maximum speed that cars on the road is allowed to move each turn.
+- *length* - the number of segments that the road occupies.
+- *startLocation* - the (x,y) coordinate that represents where the road begins.
+- *endLocation* - the (x,y) coordinate that represents where the road ends.
+- *connectedRoads* - all the other roads that this current road is physically connected to.
+- *lightsOnRoad* - all traffic lights that are on the roadd
+- *carsOnRoad* - all of the cars currently travelling on this road.
 
 
 
