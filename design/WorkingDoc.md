@@ -2,7 +2,7 @@
 ## Program Working Document
 
 ### Specification
-the client needs a program that can simulate traffic in city areas; needing to simulate different vechicle types with traffic light, roads and intersections. The user can enter input into the program to customized the city, and the program will display the objects and their status to the user. This version of the program will not display the UI, but the user can enter input for the customization of their city. The objects that are available for the users are cars, traffic lights and single lane roads. the user can choose how many cars, traffic lights and roads will the city has. This version of the simulator will simulate cars moving along single lane roads connected to each other, and move to the end of that road.
+The client needs a program that can simulate traffic in city areas; needing to simulate different vechicle types with traffic light, roads and intersections. The user can enter input into the program to customized the city, and the program will display the objects and their status to the user. This version of the program will not display the UI, but the user can enter input for the customization of their city. The objects that are available for the users are cars, traffic lights and single lane roads. the user can choose how many cars, traffic lights and roads will the city has. This version of the simulator will simulate cars moving along single lane roads connected to each other, and move to the end of that road.
 
 ### Decomposition
 The problem can be broken into operate objects that interact with each other to achieve desired behaviour.
@@ -18,8 +18,11 @@ Car class with represent a medium size vehicle. The class has the following attr
 
 The car will move using the move() method along the road in the simulation. The speed of the car will be determine by the speed limit of the road the car is travelling on. When the car is in the same position as the traffic light, it will check the status of the traffic light. If the traffic light is green, then the car will keep moving on the nex road. If the traffic light is red, then the car will stop moving. When the car moves to the end of a road and there is no connected road it will stop the simulator.
 
-####Bus
-Bbus class will inherit its attributes and behaviour from Car, represent the large size vehicle. However, Bus's length will be three time the size of car's length.
+#### Bus
+Bus class will inherit its attributes and behaviour from Car, represent the large sized vehicle. However, Bus's length will be three time the size of Car's length.
+
+#### Motorbike
+Motorbike class will inherit its attributes and behaviour from Car class, represent a small sized vehicle. However, the length of the Motorbike class will be half the length of the Car's length.
 
 
 
