@@ -16,3 +16,6 @@ Car class with represent a medium size vehicle. The class has the following attr
 - *position* - where the car will be place on the road. 
 - *currentRoad* - the road the car is currently on.
 
+The car will move using the move() method along the road in the simulation. The speed of the car will be determine by the speed limit of the road the car is travelling on. When the car is in the same position as the traffic light, it will check the status of the traffic light. If the traffic light is green, then the car will keep moving on the nex road. If the traffic light is red, then the car will stop moving. When the car moves to the end of a road and there is no connected road it will stop the simulator.
+
+
