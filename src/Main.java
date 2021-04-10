@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        //Get info needed to start sim:
+        //Get info needed from user input to start sim:
         Scanner simController = new Scanner(System.in);
 //        System.out.println("How many roads?");
 //        main.setRoadSpawns(simController.nextInt());
@@ -15,10 +15,12 @@ public class Main {
 //        System.out.println("How many traffic lights?");
 //        main.setLightSpawns(simController.nextInt());
 
-        // set values for user inputs for prototype.
-        int roadSpawns = 2;
-        int carSpawns = 1;
-        int lightSpawns = 1;
+        System.out.println("How many roads?");
+        int roadSpawns = simController.nextInt();
+        System.out.println("How many cars?");
+        int carSpawns = simController.nextInt();
+        System.out.println("How many traffic lights?");
+        int lightSpawns = simController.nextInt();
 
 
         //Create objects:
