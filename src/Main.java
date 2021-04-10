@@ -21,6 +21,12 @@ public class Main {
         int carSpawns = simController.nextInt();
         System.out.println("How many traffic lights?");
         int lightSpawns = simController.nextInt();
+        while (lightSpawns > roadSpawns) {
+            System.out.println("Traffic lights quantity must not be more than road quantity");
+            System.out.println("Retype the traffic light:");
+            lightSpawns = simController.nextInt();
+        }
+
 
 
         //Create objects:
