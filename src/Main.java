@@ -59,11 +59,23 @@ public class Main {
 
 
         // set locations and connections:
-        System.out.println("Settings:");
+        /* System.out.println("Settings:");
         roads.get(1).setStartLocation(new int[]{roads.get(0).getLength() + 1, 0}); // place road_1 to a position at the end of road_0.
         roads.get(1).printRoadInfo();
         roads.get(0).getConnectedRoads().add(roads.get(1)); // connect road_0 to road_1
-        System.out.println();
+        System.out.println(); */
+
+        for (int i = 0; i <= roadSpawns; i++) {
+            try{
+                roads.get(i + 1).setStartLocation(new int[]{roads.get(i).getLength() + 1, 0}); // place next road at the end of the previous road
+            }
+            catch (IndexOutOfBoundsException e){
+                break;
+            }
+            roads.get(i + 1).printRoadInfo();
+            roads.get(i).getConnectedRoads().add(roads.get(i + 1)); // connect previous road to the next road
+            System.out.println();
+        }
 
 
         //Simulation loop:
