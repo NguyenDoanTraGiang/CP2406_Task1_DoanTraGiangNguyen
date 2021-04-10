@@ -52,7 +52,7 @@ public class Main {
         System.out.println("\nTraffic Lights;");
         ArrayList<TrafficLight> lights = new ArrayList<>();
         for (int i = 0; i < lightSpawns; i++) {
-            lights.add(new TrafficLight(Integer.toString(i), roads.get(0))); // all created lights will begin on road_0.
+            lights.add(new TrafficLight(Integer.toString(i), roads.get(i))); // each light will be at the end of each road.
             lights.get(i).printLightStatus();
         }
         System.out.println();
