@@ -18,12 +18,11 @@ public class Main {
         //System.out.println("How many roads?");
         //int roadSpawns = simController.nextInt();
         int roadSpawns = 0;
-
+        int carSpawns = 0;
         System.out.println("How many roads?");
         roadSpawns = checkValidInt(simController, roadSpawns);
-
         System.out.println("How many cars?");
-        int carSpawns = simController.nextInt();
+        carSpawns = checkValidInt(simController, carSpawns);
         System.out.println("How many traffic lights?");
         int lightSpawns = simController.nextInt();
         while (lightSpawns > roadSpawns) {
