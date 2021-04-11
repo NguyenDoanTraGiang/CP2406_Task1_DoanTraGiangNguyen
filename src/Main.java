@@ -22,10 +22,15 @@ public class Main {
 
         System.out.println("How many roads?");
         roadSpawns = checkValidInt(simController, roadSpawns);
+        roadSpawns = checkPositiveInt(simController, roadSpawns);
+
         System.out.println("How many cars?");
         carSpawns = checkValidInt(simController, carSpawns);
+        carSpawns = checkPositiveInt(simController, carSpawns);
+
         System.out.println("How many traffic lights?");
         lightSpawns = checkValidInt(simController, lightSpawns);
+        lightSpawns = checkPositiveInt(simController, lightSpawns);
 
         while (lightSpawns > roadSpawns) {
             System.out.println("Traffic lights quantity must not be more than road quantity");
@@ -116,6 +121,17 @@ public class Main {
         }
 
 
+    }
+
+    public static int checkPositiveInt(Scanner simController, int input) {
+        do {
+            if (input < 0) {
+                System.out.println("Input cannot be lower then 0");
+                input = 0;  // reset value back to 0 for checkValidInt()
+                input = checkValidInt(simController, input);
+            }
+        } while (input < 0);
+        return input;
     }
 
     public static int checkValidInt(Scanner simController, int input) {
