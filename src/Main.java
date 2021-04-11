@@ -15,8 +15,13 @@ public class Main {
 //        System.out.println("How many traffic lights?");
 //        main.setLightSpawns(simController.nextInt());
 
+        //System.out.println("How many roads?");
+        //int roadSpawns = simController.nextInt();
+        int roadSpawns = 0;
+
         System.out.println("How many roads?");
-        int roadSpawns = simController.nextInt();
+        roadSpawns = checkValidInt(simController, roadSpawns);
+
         System.out.println("How many cars?");
         int carSpawns = simController.nextInt();
         System.out.println("How many traffic lights?");
@@ -26,8 +31,6 @@ public class Main {
             System.out.println("Retype the traffic light:");
             lightSpawns = simController.nextInt();
         }
-
-
 
         //Create objects:
         System.out.println("Object Creation:\n---------------------");
@@ -62,7 +65,6 @@ public class Main {
             lights.get(i).printLightStatus();
         }
         System.out.println();
-
 
         // set locations and connections:
         /* System.out.println("Settings:");
@@ -113,5 +115,19 @@ public class Main {
         }
 
 
+    }
+
+    public static int checkValidInt(Scanner simController, int input) {
+        do {
+            // Check if the input is int or not
+            if (simController.hasNextInt()) {  //  hasNextInt() check if the Scanner's next input is an int
+                input = simController.nextInt();
+            }
+            else {
+                System.out.println("Please enter a integer");
+            }
+            simController.nextLine();  // Bring scanner to next line to prevent input error/infinite loop
+        } while (input == 0);
+        return input;
     }
 }
