@@ -15,16 +15,18 @@ public class Main {
 //        System.out.println("How many traffic lights?");
 //        main.setLightSpawns(simController.nextInt());
 
-        //System.out.println("How many roads?");
-        //int roadSpawns = simController.nextInt();
+        // Create starting variables
         int roadSpawns = 0;
         int carSpawns = 0;
+        int lightSpawns = 0;
+
         System.out.println("How many roads?");
         roadSpawns = checkValidInt(simController, roadSpawns);
         System.out.println("How many cars?");
         carSpawns = checkValidInt(simController, carSpawns);
         System.out.println("How many traffic lights?");
-        int lightSpawns = simController.nextInt();
+        lightSpawns = checkValidInt(simController, lightSpawns);
+
         while (lightSpawns > roadSpawns) {
             System.out.println("Traffic lights quantity must not be more than road quantity");
             System.out.println("Retype the traffic light:");
