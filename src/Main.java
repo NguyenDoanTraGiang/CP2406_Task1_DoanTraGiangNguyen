@@ -45,7 +45,9 @@ public class Main {
         for (int i = 0; i < roadSpawns; i++) {
             System.out.println("Please input parameters for road_" + i + "...");
             System.out.print("Length:");
-            int lengthInput = simController.nextInt();
+            int lengthInput = 0;
+            lengthInput = checkValidInt(simController, lengthInput);
+            lengthInput = checkPositiveInt(simController, lengthInput);
 //            System.out.print("Speed limit:");
 //            int speedLimitInput = simController.nextInt();
             int speedLimitInput = 1; // force speed limit to be 1 for prototype.
