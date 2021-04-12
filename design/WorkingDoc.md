@@ -48,5 +48,7 @@ The traffic light will operate using the operate() method. Randomly changing fro
 
 #### Main
 This class will contain the main() method that will have the simulation loop.
+The Main class also has checkValidInt() method for checking to see if uer's input is an integer or not.
+The Main class has checkPositiveInt() method is for checking if the user's input is a positive integer or not. 
 All objects needed for the simulator will be created here such as roads, cars and traffic lights. The objects quantity will be determined by user's input. Locations for roads and their connection will also be set here. The user will have control over the length of the road and the speed the simulator runs at. The simulation will run, moving the car and operating traffic lights until the car move to the end of the road and has to stop.
 
