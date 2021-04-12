@@ -36,6 +36,7 @@ Road class will represent a single lane road object. It has the following attrib
 - *connectedRoads* - all the other roads that this current road is physically connected to.
 - *lightsOnRoad* - all traffic lights that are on the roadd
 - *carsOnRoad* - all of the cars currently travelling on this road.
+All Road methods are public so that the different type of roads can inherit the methods of Road
 
 For this version of the program the speedLimit will be set to 1. Meaning the car will only be able to move 1 position each turn, make it easier to deal with traffic lights and end of the road. The length of the road will be decided by user's input. Roads will interact with other roads by being connected to them, creating a simple straight intersection with single lane. Cars will move from the starting position to the end of the road. Traffic light can be places only at the end of the road. 
 
