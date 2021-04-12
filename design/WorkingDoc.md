@@ -17,6 +17,8 @@ Car class with represent a medium size vehicle. The class has the following attr
 - *currentRoad* - the road the car is currently on.
 
 The car will move using the move() method along the road in the simulation. The speed of the car will be determine by the speed limit of the road the car is travelling on. When the car is in the same position as the traffic light, it will check the status of the traffic light. If the traffic light is green, then the car will keep moving on the next road. If the traffic light is red, then the car will stop moving. When the car moves to the end of a road and there is no connected road it will stop the simulator.
+Car class has printCarStatus() for printing the current position and speed of the car at the current turn.
+Car class's methods is public so that Bus and Motorbike class can inherit the same methods of Car.
 
 #### Bus
 Bus class will inherit its attributes and behaviour from Car, represent the large sized vehicle. However, Bus's length will be three time the size of Car's length.
