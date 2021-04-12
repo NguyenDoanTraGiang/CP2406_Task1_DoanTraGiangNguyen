@@ -96,8 +96,10 @@ public class Main {
         System.out.println("Simulation:");
         Random random = new Random();
         int time = 0;
+        int speedOfSim = 0;
         System.out.print("Set time scale in milliseconds:");
-        int speedOfSim = simController.nextInt();
+        speedOfSim = checkValidInt(simController, speedOfSim);
+        speedOfSim = checkPositiveInt(simController, speedOfSim);
         int carsFinished = 0;
         while (carsFinished < cars.size()) {
             for (TrafficLight light : lights) {
